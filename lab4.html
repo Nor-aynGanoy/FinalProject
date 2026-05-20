@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 2 - Combined Webpage</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    nav { background: #f4f4f4; padding: 10px; }
+    nav a { margin: 0 15px; text-decoration: none; color: #333; }
+    nav a:hover { color: #0077cc; }
+
+    .profile-pic { width: 150px; border-radius: 50%; transition: transform 0.3s; }
+    .profile-pic:hover { transform: scale(1.1); }
+
+    section { margin-top: 30px; }
+
+    table { border-collapse: collapse; width: 60%; margin-top: 20px; }
+    th { background: #333; color: #fff; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }
+
+    form input, form textarea { display: block; margin: 10px 0; width: 300px; padding: 8px; }
+    button { background: #333; color: #fff; padding: 10px 15px; border: none; cursor: pointer; }
+    button:hover { background: #555; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Clickable Image -->
+  <a href="https://media.gettyimages.com/id/182465097/photo/html-code.jpg?s=612x612&w=gi&k=20&c=oOjTLvio13YKRbuUZlH446usltn_cEDodyKxduUZUMk=" target="_blank">
+    <img src="web.png" width="200">
+  </a>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Creative developer with a love for building interactive web experiences.</p>
+  </section>
+
+  <!-- Styled Table -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <table>
+      <tr><th>Skill</th><th>Level</th></tr>
+      <tr><td>HTML</td><td>beginner</td></tr>
+      <tr><td>CSS</td><td>beginner</td></tr>
+      <tr><td>JavaScript</td><td>Advanced</td></tr>
+      <tr><td>React</td><td>Intermediate</td></tr>
+    </table>
+  </section>
+
+  <!-- Form with Validation -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      if (!name || !email || !message) {
+        alert("All fields are required!");
+        return false;
+      }
+      return true;
+    }
+  </script>
+
+</body>
+</html>

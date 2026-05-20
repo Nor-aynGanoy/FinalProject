@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Website | Web Technologies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER SECTION */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* NAVIGATION BAR */
+        nav {
+            background-color: #34495e;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 0.5rem;
+        }
+
+        /* TEAM MEMBERS */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .member-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .member-card h4 {
+            color: #2c3e50;
+            margin-bottom: 0.3rem;
+        }
+
+        .member-card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* LAB EXERCISES LIST */
+        .lab-list {
+            list-style: none;
+        }
+
+        .lab-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #1abc9c;
+            transition: transform 0.2s;
+        }
+
+        .lab-list li:hover {
+            transform: translateX(5px);
+        }
+
+        .lab-list a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            display: block;
+        }
+
+        .lab-list a::before {
+            content: "📂 ";
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>CLASS WEBSITE</h1>
+        <p>Introduction to Web Technologies | Final Project</p>
+        <p><strong>NAME:NOR-AYN I, GANOY</strong> | Section: [BSIT-1B]</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+             <li><a href="#labs">Laboratory Exercises</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <!-- WELCOME SECTION -->
+        <section id="home">
+            <h2> Hi Welcome to my website!</h2>
+            <p>
+                This is my website serves as my final project submission for the subject <strong>Introduction to Web Technologies</strong>. 
+                Here you will find all our laboratory exercises, activities, and outputs created throughout the semester. 
+                Each link below leads to the actual working application of our lessons in HTML, CSS, and PHP.
+            </p>
+            <br>
+            <p style="font-style: italic; color: #666;">
+                "Learning by doing: building, designing, and coding the web."
+            </p>
+       
+
+        <!-- LABORATORY EXERCISES SECTION -->
+        <section id="labs">
+            <h2>My Laboratory Exercises</h2>
+            <ul class="lab-list">
+
+                
+
+                <li><a href="lab1.html" target="_blank">Lab 1: Building a Simple Web Page (HTML and CSS)
+</a></li>
+                <li><a href="lab2.html" target="_blank">Lab 2: activity number 2</a></li>
+                <li><a href="lab3.html" target="_blank">Lab 3: PERSONAL PROFILE PAGE</a></li>
+                <li><a href="lab4.html" target="_blank">Lab 4:COMBINE EVERYTHING</a></li>
+                <li><a href="lab5.php" target="_blank">Lab 5: MINI PROJECT</a></li>
+                
+                <li><a href="Lab6.php" target="_blank">Lab 7: ACTIVITY</a></li>
+                
+
+
+
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Introduction to Web Technologies | Class Website Final Project</p>
+    </footer>
+
+</body>
+</html>
